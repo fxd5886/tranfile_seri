@@ -52,7 +52,7 @@ public class ClientServer {
     @Scheduled(cron = "0 0/1  * * * ? ")
     public void ClientStart() throws  NoSuchPortException, PortInUseException, UnsupportedCommOperationException {
         try{
-            System.out.println("aaaaa");
+            System.out.println("bbbbbb");
 
             client = SerialPortUtil.openSerialPort("COM3", 115200);
              //client=new Socket(ip,port);
