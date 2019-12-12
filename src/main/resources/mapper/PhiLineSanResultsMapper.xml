@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.tranfile.dao.PhiLineSpanResultsDao">
+       <insert id="batchAdd"  parameterType="com.example.tranfile.vo.PhiLineSpanResults" >
+                INSERT INTO ${dataname}.ice_results(line_span_id,calc_time,m_ice_thickness)
+                VALUES
+                <foreach collection="entitys" item="entity" separator=",">
+                    (#{entity.lineSpanId},#{entity.calcTime},#{entity.mIceThickness})
+                </foreach>
+       </insert>
+
+</mapper>
